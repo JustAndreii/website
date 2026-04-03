@@ -1,0 +1,38 @@
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- LEFT: LOGO -->
+    <div class="logo">
+      <span class="brand">ROLEX</span>
+      <span class="vault">Vault</span>
+    </div>
+
+    <!-- CENTER: MENU -->
+    <ul class="nav-links" [class.active]="isOpen">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/collection">Collection</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+      <!-- LOGIN -->
+      <button class="login-btn" routerLink="/login">
+        Login
+      </button>
+
+      <!-- MOBILE MENU -->
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>

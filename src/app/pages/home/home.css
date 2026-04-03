@@ -1,0 +1,90 @@
+
+
+.home {
+  padding-top: 100px;
+  background: #111;
+  color: white;
+  text-align: center;
+
+   background: linear-gradient(
+              rgba(0, 0, 0, 0.7), 
+              rgba(0, 0, 0, 0.7)
+            ),
+            url('../../../assets/images/watches.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  color:whitesmoke;
+  margin-bottom: 40px;
+}
+
+
+.hero h1 {
+  color: rgb(213, 186, 30);
+  font-size: 40px;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+.slider {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 400px;
+  object-fit: cover;
+}
+.history {
+  color: whitesmoke;
+  font-weight: bold;
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+  padding: 20px;
+}
+
+.history h2 {
+  color: rgb(180, 155, 17);
+  margin-bottom: 15px;
+}
+
+.history p {
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.crown-icon {
+  font-size: 30px;
+  color: goldenrod;
+  margin-bottom: 10px;
+
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+
+  animation: floatCrown 3s ease-in-out infinite;
+}
+
+
+@keyframes floatCrown {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+

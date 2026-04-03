@@ -1,0 +1,113 @@
+
+.watch-detail {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: #111;
+  color: white;
+}
+.watch-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.watch-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.watch-info {
+  flex: 1;
+}
+
+.watch-info h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+
+.description {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.specs {
+  margin-bottom: 20px;
+}
+
+.specs h2 {
+  margin-bottom: 10px;
+}
+.price p {
+  font-size: 20px;
+  color: gold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: gold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideLeft 1s ease forwards;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .watch-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .watch-info {
+    text-align: center;
+  }
+}

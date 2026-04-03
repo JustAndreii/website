@@ -1,0 +1,144 @@
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 50px;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.brand {
+  color: gold;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+.vault {
+  color: gold;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+
+  margin-left: 500px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+  background: gold;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid gold;
+
+  background: transparent;
+  color: gold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: gold;
+  color: black;
+  box-shadow: 0 0 15px gold;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: black;
+    text-align: center;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+    padding: 20px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
